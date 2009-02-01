@@ -66,5 +66,19 @@ module Wiki
         @url.split("/").last
       end
     end
+    
+    def latest(n)
+
+       def rec(r)
+          l = Array.new << r
+          r.subpages.each do |sp|
+            l += rec(sp)
+          end
+          l 
+       end
+
+       rec(self).sort_by{ |i| i.time }.reverse.first(n)
+     end
+    
   end
 end
