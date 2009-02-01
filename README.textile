@@ -1,0 +1,14 @@
+h1. Sinatra Wiki
+
+This is a small sinatra wiki for pages written in Textile.
+
+Just create a folder called wiki at the same level at this app. Drop .textile files and folders inside.
+
+One page can has subpages. Just create a folder with the same name as the file. Eg: @/topic@ will show @topic.textile@ contents and the subpages in @topic@ folder.
+
+You can then use whatever VCS you want with your wiki folder. For my personal usage, I prefer git.
+
+
+h2. Legal stuff
+
+Who cares? It's under the "WTFPL":http://wiki.alcidesfonseca.com/licenses/WTFPL and was originally written by "Alcides Fonseca":http://alcidesfonseca.com
