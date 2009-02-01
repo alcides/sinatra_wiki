@@ -4,7 +4,7 @@ require 'redcloth'
 require 'lib/wikipage'
 
 configure do
-  $wiki_path = Dir.pwd + '/../wiki/'
+  $wiki_path = File.dirname(__FILE__) + '/../wiki/'
 end
 
 template(:layout) do  
@@ -12,7 +12,12 @@ template(:layout) do
 end
 
 not_found do
-  erb :not_found
+  erb :'400'
+end
+
+error do
+  @e = request.env['sinatra_error']
+  erb :'500'
 end
 
 before do
