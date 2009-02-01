@@ -25,8 +25,8 @@ before do
 end
 
 get '/' do
-  @page = Wiki::Page.new("")
-	erb :article
+  @pages = Wiki::Page.new("").latest(10)
+	erb :latest
 end
 
 

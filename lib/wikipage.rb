@@ -70,7 +70,10 @@ module Wiki
     def latest(n)
 
        def rec(r)
-          l = Array.new << r
+          l = Array.new 
+          unless r.is_folder
+            l << r
+          end
           r.subpages.each do |sp|
             l += rec(sp)
           end

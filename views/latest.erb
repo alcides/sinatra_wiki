@@ -1,0 +1,7 @@
+<% for page in @pages %>
+	<div class="article">
+		<div class="date">Last Edited in <%= page.ftime %></div>
+		<%= page.content %>
+	</div>
+	<div class="spacer"></div>
+<% end %>
