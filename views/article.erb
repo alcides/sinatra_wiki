@@ -1,0 +1,13 @@
+<div class="article">
+	<div class="date">Last Edited in <%= @page.ftime %></div>
+	<%= @page.content %>
+</div>
+
+<% if @page.is_folder %>
+	<h2>Subpages:</h2>
+	<ul>
+		<% for p in @page.sorted_subpages %>
+			<li><a href="/<%= p.url %>"><%= p %></a> (<%= p.ftime %>)</li>
+		<% end %>
+	</ul>
+<% end %>
